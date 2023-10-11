@@ -140,7 +140,7 @@ div#header-nav > ul#nav-list > div#nav-menu {
         flex-direction: column;
         align-items: flex-start;
         padding: 20px;
-        height: 100%;
+        overflow: auto;
     }
 
     /*Selon que la box est checked ou non on change l'icône du menu*/
