@@ -1,0 +1,160 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* FIN DU RESET */
+
+/*Application du style sur le header, footer et la main*/
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.3rem;
+}
+
+div#header-nav > ul#nav-list > div#nav-menu > li:hover {
+    padding: 1.3rem;
+    padding-left: 0;
+    background-color: #a0aaaa;
+    transition: 0.3s ease;
+    width: 100%;
+}
+
+div#container {
+    font-size: 12px;
+}
+
+
+div#container > main {
+    min-height: 100vh;
+}
+
+header {
+    padding: 20px;
+}
+
+header, footer {
+    background: rgb(40, 18, 53);
+    height: 15vh;
+}
+
+/*Passage du header nav et du nav menu en flex*/
+
+div#header-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    height: 100%;
+}
+
+div#header-nav > ul#nav-list {
+    display: flex;
+}
+
+div#header-nav > ul#nav-list > div#nav-menu {
+    display: flex;
+    gap: 5rem;
+}
+
+
+/*Grossisage du logo*/
+
+.nav-logo {
+    font-size: 32px;
+}
+
+
+
+
+
+/*On masque la checkbox du input*/
+
+#button {
+    display: none;
+}
+
+
+
+
+/* Gestion du responsive */
+@media (max-width: 768px) {
+    div#header-nav > ul#nav-list > div#nav-menu {
+       display: none;
+       position: absolute;
+       background-color:rgb(40, 18, 53);
+       top: 15vh;
+       right: 0;
+       left: 0;
+    }
+
+    #button:checked ~ div#nav-menu {
+        display: flex !important;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+        height: 100%;
+    }
+
+        /*Selon que la box est checked ou non on change l'icône du menu*/
+
+    #button + label:before {
+        display: block;
+        content: "\f0c9"; 
+        font-size: 1.2rem;
+    }
+      
+    #button:checked + label:before {
+        display: block;
+        content: "\f410"; 
+        font-size: 1.2rem;
+    }
+
+    
+}
+
+
