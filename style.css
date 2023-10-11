@@ -56,12 +56,7 @@ a {
     font-size: 1.3rem;
 }
 
-div#header-nav > ul#nav-list > div#nav-menu > li:hover {
-    padding: 1.3rem;
-    background-color: #a0aaaa;
-    transition: 0.3s ease;
-    width: 100%;
-}
+
 
 div#container {
     font-size: 12px;
@@ -79,6 +74,14 @@ header {
 header, footer {
     background: rgb(40, 18, 53);
     height: 15vh;
+}
+
+/* Stylisation des liens au survolage en mode desktop  */
+
+div#header-nav > ul#nav-list > div#nav-menu > li:hover {
+    padding: 1rem;
+    background-color: #a0aaaa;
+    transition: 0.3s ease;
 }
 
 /*Passage du header nav et du nav menu en flex*/
@@ -122,6 +125,7 @@ div#header-nav > ul#nav-list > div#nav-menu {
 
 /* Gestion du responsive */
 @media (max-width: 768px) {
+    
     div#header-nav > ul#nav-list > div#nav-menu {
        display: none;
        position: absolute;
@@ -153,7 +157,15 @@ div#header-nav > ul#nav-list > div#nav-menu {
         font-size: 1.2rem;
     }
 
-    
+    /* Application de style quand on survole les liens du menu déroulant */
+
+    div#header-nav > ul#nav-list > div#nav-menu > li:hover {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        background-color: #a0aaaa;
+        transition: 0.3s ease;
+        width: 100%;
+    }
 }
 
 
